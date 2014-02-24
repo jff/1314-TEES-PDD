@@ -23,15 +23,63 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package uk.ac.tees.pdd1314.battleships;
+
+package uk.ac.tees.pdd;
+
+import java.util.ArrayList;
 
 /**
  *
  * @author Joao F. Ferreira <joao@joaoff.com>
  */
-public enum GridCellStatus {
+public class Settings {
+    private int SIZE = 10;
+    private ArrayList<Ship> SHIPS = new ArrayList<>();
+    private boolean blindFoldGame = false;
+    
+    /**
+     * Default settings.
+     */
+    public Settings() {
+        SIZE = 6;
+        blindFoldGame = false;
+        
+        SHIPS.add(new Destroyer());
+        SHIPS.add(new BattleShip());
+        SHIPS.add(new BattleShip());
+    }
 
-    CELL_UNTARGETED, 
-    CELL_MISSED_SHOT, 
-    CELL_SUCCESSFUL_SHOT
+    public int getSIZE() {
+        return SIZE;
+    }
+
+    public void setSIZE(int SIZE) {
+        this.SIZE = SIZE;
+    }
+
+    public ArrayList<Ship> getSHIPS() {
+        return SHIPS;
+    }
+    
+    public void addShip(Ship ship) {
+        this.SHIPS.add(ship);
+    }
+
+    public void setSHIPS(ArrayList<Ship> SHIPS) {
+        this.SHIPS = SHIPS;
+    }
+
+    public boolean isBlindFoldGame() {
+        return blindFoldGame;
+    }
+
+    public void switchBlindFoldGame() {
+        if(this.isBlindFoldGame()) {
+            this.blindFoldGame = false;
+        } else {
+            this.blindFoldGame = true;
+        }
+    }
+ 
+    
 }

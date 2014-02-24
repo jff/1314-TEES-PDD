@@ -24,53 +24,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package uk.ac.tees.pdd1314.battleships;
+package uk.ac.tees.pdd;
 
 /**
  *
  * @author Joao F. Ferreira <joao@joaoff.com>
  */
-public abstract class Ship {
-    private final int size;
-    private int untargeted;
-    
-    public Ship(int size) {
-        this.size = this.untargeted = size;
+public class Destroyer extends Ship {
+    public Destroyer() {
+        super(2);
     }
 
-    /**
-     * Returns the size of the ship. The size is the number of cells occupied.
-     * 
-     * @return the size of the ship
-     */
-    public int getSize() {
-        return this.size;
+    @Override
+    public char toChar() {
+        return 'D';
     }
-    
-    /**
-     * Returns the number of intact "cells".
-     * 
-     * @return the number of intact "cells" 
-     */
-    public int getUntargeted() {
-        return this.untargeted;
-    }
-
-    /**
-     * Hits one cell of the ship
-     */
-    public void hit() {
-        this.untargeted--;
-    }
-    
-    /**
-     * Checks whether a ship is floating.
-     * 
-     * @return true if the ship is still floating
-     */
-    public boolean isFloating() {
-        return this.untargeted > 0;
-    }
-
-    public abstract char toChar();
 }

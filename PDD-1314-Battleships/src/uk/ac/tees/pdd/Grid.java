@@ -24,7 +24,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package uk.ac.tees.pdd1314.battleships;
+package uk.ac.tees.pdd;
 
 import java.util.ArrayList;
 

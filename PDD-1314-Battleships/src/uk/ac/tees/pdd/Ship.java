@@ -1,5 +1,3 @@
-package uk.ac.tees.pdd1314.battleships;
-
 /*
  * Copyright (c) 2014, Joao F. Ferreira <joao@joaoff.com>
  * All rights reserved.
@@ -26,17 +24,53 @@ package uk.ac.tees.pdd1314.battleships;
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+package uk.ac.tees.pdd;
+
 /**
  *
  * @author Joao F. Ferreira <joao@joaoff.com>
  */
-public class InvalidCoordinateException extends Exception {
-
-    public InvalidCoordinateException() {
+public abstract class Ship {
+    private final int size;
+    private int untargeted;
+    
+    public Ship(int size) {
+        this.size = this.untargeted = size;
     }
 
-    public InvalidCoordinateException(String string) {
-        super(string);
+    /**
+     * Returns the size of the ship. The size is the number of cells occupied.
+     * 
+     * @return the size of the ship
+     */
+    public int getSize() {
+        return this.size;
     }
     
+    /**
+     * Returns the number of intact "cells".
+     * 
+     * @return the number of intact "cells" 
+     */
+    public int getUntargeted() {
+        return this.untargeted;
+    }
+
+    /**
+     * Hits one cell of the ship
+     */
+    public void hit() {
+        this.untargeted--;
+    }
+    
+    /**
+     * Checks whether a ship is floating.
+     * 
+     * @return true if the ship is still floating
+     */
+    public boolean isFloating() {
+        return this.untargeted > 0;
+    }
+
+    public abstract char toChar();
 }

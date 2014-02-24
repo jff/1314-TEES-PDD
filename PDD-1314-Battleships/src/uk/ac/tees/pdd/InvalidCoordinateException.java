@@ -1,3 +1,5 @@
+package uk.ac.tees.pdd;
+
 /*
  * Copyright (c) 2014, Joao F. Ferreira <joao@joaoff.com>
  * All rights reserved.
@@ -24,19 +26,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package uk.ac.tees.pdd1314.battleships;
-
 /**
  *
  * @author Joao F. Ferreira <joao@joaoff.com>
  */
-public class BattleShip extends Ship{
-    public BattleShip() {
-        super(5);
+public class InvalidCoordinateException extends Exception {
+
+    public InvalidCoordinateException() {
     }
 
-    @Override
-    public char toChar() {
-        return 'B';
+    public InvalidCoordinateException(String string) {
+        super(string);
     }
+    
 }

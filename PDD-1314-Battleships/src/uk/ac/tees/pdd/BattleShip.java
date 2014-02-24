@@ -24,39 +24,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package uk.ac.tees.pdd1314.battleships;
+package uk.ac.tees.pdd;
 
 /**
  *
  * @author Joao F. Ferreira <joao@joaoff.com>
  */
-public class GridCell {
-    private GridCellStatus status;
-    private Ship ship;
-    
-    public GridCell() {
-        this.status = GridCellStatus.CELL_UNTARGETED;
-        this.ship = null;
-    }
-    
-    public GridCell(GridCellStatus status, Ship ship) {
-        this.status = status;
-        this.ship = ship;
+public class BattleShip extends Ship{
+    public BattleShip() {
+        super(5);
     }
 
-    public GridCellStatus getStatus() {
-        return status;
+    @Override
+    public char toChar() {
+        return 'B';
     }
-
-    public void setStatus(GridCellStatus status) {
-        this.status = status;
-    }
-
-    public Ship getShip() {
-        return ship;
-    }
-
-    public void setShip(Ship ship) {
-        this.ship = ship;
-    }   
 }

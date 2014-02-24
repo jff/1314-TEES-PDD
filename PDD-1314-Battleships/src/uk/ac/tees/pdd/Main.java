@@ -23,7 +23,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package uk.ac.tees.pdd1314.battleships;
+package uk.ac.tees.pdd;
 
 import java.util.Scanner;
 
