@@ -23,20 +23,16 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package pdd.pkg1314.s02;
+
+package uk.ac.tees.pdd;
 
 /**
  *
  * @author Joao F. Ferreira <joao@joaoff.com>
  */
-public class TestOne {
-
-    public static void main(String[] args) {
-        One o1 = new One();
-        One o2 = new One();
+public class One {
         
-        System.out.println("Reference id (o1): " + o1);
-        System.out.println("Reference id (o2): " + o2);
+    public One() {
+        // do nothing
     }
-
 }
