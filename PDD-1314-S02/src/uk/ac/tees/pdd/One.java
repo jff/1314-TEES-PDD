@@ -30,6 +30,10 @@ package uk.ac.tees.pdd;
  * @author Joao F. Ferreira <joao@joaoff.com>
  */
 public class One {
+    
+    public One() {
+        // constructor not doing nothing at the moment...
+    }
 
     public static void main(String[] args) {
         One o1 = new One();
